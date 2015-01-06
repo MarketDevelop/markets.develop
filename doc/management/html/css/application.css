@@ -1,0 +1,234 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: 70px;
+}
+
+td, th {
+    white-space: nowrap;
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+.page-header h1 {
+    margin-top: 0;
+}
+
+
+/* input-xlg */
+
+input[type="date"].input-xlg,
+input[type="time"].input-xlg,
+input[type="datetime-local"].input-xlg,
+input[type="month"].input-xlg {
+  line-height: 90px;
+}
+
+.form-control-static.input-xlg {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.input-xlg,
+.form-horizontal .form-group-xlg .form-control {
+  height: 90px;
+  padding: 10px 16px;
+  font-size: 50px;
+  line-height: 1.13;
+  border-radius: 12px;
+}
+
+.input-small {
+  padding: 5px 16px;
+  line-height: 1.13;
+  width: 75px;
+  display: inline;
+}
+.input-price {
+  padding: 5px 16px;
+  line-height: 1.13;
+  width: 100px;
+  display: inline;
+}
+
+select.input-xlg {
+  height: 90px;
+  line-height: 90px;
+}
+select.em10 {
+    font-size: 100%; 
+    width: 10em;
+}
+textarea.input-xlg,
+select[multiple].input-xlg {
+  height: auto;
+}
+
+.input-xlg + .form-control-feedback {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.input-group-addon.input-xlg {
+  padding: 10px 16px;
+  font-size: 50px;
+  border-radius: 12px;
+}
+
+/* for small device */
+@media screen and (max-width: 480px) {
+
+    input[type="date"].input-xlg,
+    input[type="time"].input-xlg,
+    input[type="datetime-local"].input-xlg,
+    input[type="month"].input-xlg {
+      line-height: 43px;
+    }
+
+    .form-control-static.input-xlg {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .input-xlg,
+    .form-horizontal .form-group-xlg .form-control {
+      height: 46px;
+      padding: 10px 16px;
+      font-size: 12px;
+      line-height: 1.33;
+      border-radius: 6px;
+    }
+    select.input-xlg {
+      height: 46px;
+      line-height: 46px;
+    }
+    textarea.input-xlg,
+    select[multiple].input-xlg {
+      height: auto;
+    }
+
+    .input-xlg + .form-control-feedback {
+      width: 46px;
+      height: 46px;
+      line-height: 46px;
+    }
+
+    .input-group-addon.input-xlg {
+      padding: 10px 16px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+	border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+	display: none;
+}
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+	}
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.nav-sidebar > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+	padding: 20px;
+}
+@media (min-width: 768px) {
+	.main {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+}
+.main .page-header {
+	margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.placeholders h4 {
+	margin-bottom: 0;
+}
+.placeholder {
+	margin-bottom: 20px;
+}
+.placeholder img {
+	display: inline-block;
+	border-radius: 50%;
+}
+
+/* more condenced */
+
+label {
+    margin-bottom: 0;
+}
+
+.required label.control-label {
+	color: rgb(100%, 0%, 0%);
+}

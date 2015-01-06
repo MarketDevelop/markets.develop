@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>仲卸業務支援システム - 在庫</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="./css/application.css" rel="stylesheet">
+
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="orders-index.html">仲卸業務支援システム</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        仲卸 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="orders-index.html">注文</a></li>
+                            <li><a href="stocks-index.html">在庫</a></li>
+                            <li><a href="items-index.html">商品</a></a></li>
+                            <li><a href="items-import.html">商品取込</a></li>
+                        </ul>
+                </li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        顧客 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="customers-index.html">顧客</a></li>
+                            <li><a href="customer-items-index.html">商品</a></li>
+                            <li><a href="customer-items-import.html">商品取込</a></li>
+                            <li><a href="recommended-items-index.html">情報配信</a></li>
+                        </ul>
+                </li>
+				<li>
+                    <a href="suppliers-index.html">仕入先</a>
+                </li>
+				<li>
+                    <a href="storages-index.html">倉庫</a>
+                </li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 管理者 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+                        <li><a href="staffs-index.html">スタッフ</a></li>
+						<li><a href="profile.html">プロフィール</a></li>
+						<li class="divider"></li>
+						<li><a href="custom-fields-index.html">カスタムフィールド設定</a></li>
+						<li><a href="system-settings-index.html">システム設定</a></li>
+						<li class="divider"></li>
+						<li><a href="./">ログアウト</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--/.nav-collapse -->
+	</div>
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="pull-right">
+        <a href="stock-items-index.html" class="btn btn-default">仲卸商品別在庫</a>
+    </div>
+
+	<div class="page-header">
+		<h1>仕入先・倉庫別在庫管理</h1>
+	</div>
+
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#search">
+					<span class="glyphicon glyphicon-filter"></span> 絞り込み
+				</a>
+			</h4>
+		</div>
+		<div id="search" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<form role="form">
+					<div class="row">
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+							<div class="form-group">
+								<label for="personality">仕入先</label>
+								<input type="text" class="form-control" id="personality" placeholder="">
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+							<div class="form-group">
+								<label for="personality">入荷日</label>
+                                    <input type="date" class="form-control" id="dateFrom" placeholder="から">
+                            </div>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+							<div class="form-group">
+								<label for="personality">倉庫</label>
+								<input type="text" class="form-control" id="personality" placeholder="">
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+							<div class="form-group">
+								<label for="personality">仲卸品名</label>
+								<input type="text" class="form-control" id="personality" placeholder="">
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+							<div class="form-group">
+								<label for="personality">カテゴリ</label>
+								<input type="text" class="form-control" id="personality" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">検索</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">一覧</h2>
+		</div>
+		<div class="panel-body">
+			xxx-xxx 件を表示
+			<ul class="pagination" style="float: right; margin: 0">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		<div style="overflow: auto; overflow-y: hidden">
+			<table class="table table-condensed table-hover" style="margin-bottom: 0">
+				<thead>
+					<tr>
+                        <th>仕入先</th>
+                        <th>倉庫</th>
+                        <th>元卸品名</th>
+                        <th>入荷日</th>
+                        <th>ケース/入数</th>
+						<th>パック数量/入数</th>
+						<th>バラ数量</th>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<tr>
+                        <td>仕入先元卸</td>
+						<td>1111</td>
+                        <td><a href="stocks-edit.html">芋</a></td>
+                        <td>2014/11/11</td>
+						<td>4ケース/50個</td>
+						<td>4パック/10個</td>
+						<td>8個</td>
+					</tr>
+					<tr>
+                        <td>仕入先元卸</td>
+						<td>1111</td>
+                        <td><a href="stocks-edit.html">芋</a></td>
+                        <td>2014/11/11</td>
+						<td>4ケース/50個</td>
+						<td>4パック/10個</td>
+						<td>8個</td>
+					</tr>
+					<tr>
+                        <td>仕入先元卸</td>
+						<td>1111</td>
+                        <td><a href="stocks-edit.html">芋</a></td>
+                        <td>2014/11/11</td>
+						<td>4ケース/50個</td>
+						<td>4パック/10個</td>
+						<td>8個</td>
+					</tr>
+					<tr>
+                        <td>仕入先元卸</td>
+						<td>1111</td>
+                        <td><a href="stocks-edit.html">芋</a></td>
+                        <td>2014/11/11</td>
+						<td>4ケース/50個</td>
+						<td>4パック/10個</td>
+						<td>8個</td>
+					</tr>
+					<tr>
+                        <td>仕入先元卸</td>
+						<td>1111</td>
+                        <td><a href="stocks-edit.html">芋</a></td>
+                        <td>2014/11/11</td>
+						<td>4ケース/50個</td>
+						<td>4パック/10個</td>
+						<td>8個</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+</div>
+
+<div class="footer">
+	<div class="container">
+		<p class="text-right">Copyright &copy; 2014 Base81 Inc. All rights reserved.</p>
+	</div>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.table-hover > tbody > tr')
+				.css('cursor', 'pointer')
+				.on('click', function () {
+					// $('a', this).trigger('click')
+					location.href = $('a', this).attr('href')
+					return false
+				})
+		})
+	</script>
+
+</body>
+</html>

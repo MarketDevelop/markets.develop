@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>仲卸業務支援システム - プロフィール</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="./css/application.css" rel="stylesheet">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="orders-index.html">仲卸業務支援システム</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        仲卸 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="orders-index.html">注文</a></li>
+                            <li><a href="stocks-index.html">在庫</a></li>
+                            <li><a href="items-index.html">商品</a></a></li>
+                            <li><a href="items-import.html">商品取込</a></li>
+                        </ul>
+                </li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        顧客 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="customers-index.html">顧客</a></li>
+                            <li><a href="customer-items-index.html">商品</a></li>
+                            <li><a href="customer-items-import.html">商品取込</a></li>
+                            <li><a href="recommended-items-index.html">情報配信</a></li>
+                        </ul>
+                </li>
+				<li>
+                    <a href="suppliers-index.html">仕入先</a>
+                </li>
+				<li>
+                    <a href="storages-index.html">倉庫</a>
+                </li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 管理者 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+                        <li><a href="staffs-index.html">スタッフ</a></li>
+						<li><a href="profile.html">プロフィール</a></li>
+						<li class="divider"></li>
+						<li><a href="custom-fields-index.html">カスタムフィールド設定</a></li>
+						<li><a href="system-settings-index.html">システム設定</a></li>
+						<li class="divider"></li>
+						<li><a href="./">ログアウト</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--/.nav-collapse -->
+	</div>
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+
+	<div class="page-header">
+		<h1>プロフィール編集</h1>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">自身のプロフィール情報を変更することができます。</h3>
+		</div>
+		<div class="panel-body">
+
+				<form role="form" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label for="code" class="col-sm-2 control-label">コード</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="code" placeholder="AAA0001">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="personality" class="col-sm-2 control-label">名前</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="personality" placeholder="市場太郎">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="personality" class="col-sm-2 control-label">メールアドレス</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="personality" placeholder="admin@sample.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="personality" class="col-sm-2 control-label">権限</label>
+                        <div class="col-sm-10">
+                            <span style="padding:5px">管理者</span>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="password" class="col-sm-2 control-label">パスワード</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="●●●●●●●●">
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="password" class="col-sm-2 control-label">パスワード確認</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="●●●●●●●●">
+                        </div>
+                    </div>
+
+					<div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">更新</button>
+                        </div>
+					</div>
+
+				</form>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="footer">
+	<div class="container">
+		<p class="text-right">Copyright &copy; 2014 Base81 Inc. All rights reserved.</p>
+	</div>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.table-hover > tbody > tr')
+				.css('cursor', 'pointer')
+				.on('click', function () {
+					// $('a', this).trigger('click')
+					location.href = $('a', this).attr('href')
+					return false
+				})
+		})
+	</script>
+
+</body>
+</html>
